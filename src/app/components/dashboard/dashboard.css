@@ -1,0 +1,148 @@
+/* Premium Dashboard Styling */
+
+/* Statistics Cards */
+.stat-card {
+    background-color: var(--premium-white);
+    border: 1px solid var(--premium-border-light);
+    border-radius: var(--radius-md);
+    padding: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: all var(--transition-base);
+    box-shadow: var(--shadow-xs);
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--premium-border);
+}
+
+.stat-icon {
+    width: 3rem;
+    height: 3rem;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.stat-content {
+    flex: 1;
+}
+
+.stat-value {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--premium-dark);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+.stat-label {
+    font-size: 0.8125rem;
+    color: var(--premium-text-muted);
+    font-weight: 500;
+    margin-top: 0.25rem;
+}
+
+/* Quick Actions Card */
+.card-body.p-3 {
+    padding: 1rem 1.25rem !important;
+}
+
+/* Recent Students Table Adjustments */
+.card .table thead th {
+    background-color: var(--premium-bg);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--premium-text-muted);
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--premium-border-light);
+}
+
+.card .table tbody td {
+    padding: 1rem;
+    font-size: 0.875rem;
+    border-bottom: 1px solid var(--premium-border-light);
+}
+
+.card .table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Course Distribution */
+.course-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.course-item {
+    padding-bottom: 0.25rem;
+}
+
+.course-name {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--premium-text);
+}
+
+.course-count {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--premium-primary);
+    background-color: rgba(91, 107, 126, 0.08);
+    padding: 0.125rem 0.5rem;
+    border-radius: var(--radius-sm);
+}
+
+/* Progress Bar */
+.progress {
+    background-color: var(--premium-bg);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+}
+
+.progress-bar {
+    border-radius: var(--radius-sm);
+    transition: width var(--transition-slow);
+}
+
+/* Badge in Table */
+.table .badge {
+    font-size: 0.6875rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767px) {
+    .stat-card {
+        padding: 1rem;
+    }
+
+    .stat-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .stat-icon span {
+        font-size: 1.25rem !important;
+    }
+
+    .stat-value {
+        font-size: 1.5rem;
+    }
+
+    .stat-label {
+        font-size: 0.75rem;
+    }
+}
+
+/* Link Styling */
+a.text-decoration-none:hover {
+    text-decoration: underline !important;
+}

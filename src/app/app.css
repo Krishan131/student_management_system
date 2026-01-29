@@ -1,0 +1,6 @@
+/* App-level styles */
+main {
+    min-height: calc(100vh - 64px);
+    padding: 2rem 0 3rem;
+    background-color: var(--premium-bg);
+}

@@ -1,0 +1,47 @@
+/* Premium Navbar Styling */
+.navbar {
+    background-color: var(--premium-white);
+    border-bottom: 1px solid var(--premium-border-light);
+    padding: 1rem 0;
+    box-shadow: var(--shadow-xs);
+}
+
+.navbar-brand {
+    font-size: 1.0625rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: var(--premium-dark);
+    transition: color var(--transition-fast);
+}
+
+.navbar-brand:hover {
+    color: var(--premium-primary);
+}
+
+.nav-link {
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: var(--premium-text);
+    transition: color var(--transition-fast);
+    position: relative;
+}
+
+.nav-link:hover {
+    color: var(--premium-primary);
+}
+
+.nav-link.active {
+    color: var(--premium-primary);
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 24px;
+    height: 2px;
+    background-color: var(--premium-primary);
+    border-radius: 2px;
+}

@@ -1,0 +1,178 @@
+<div class="container py-4">
+    <!-- Welcome Header -->
+    <div class="row mb-4">
+        <div class="col">
+            <h1 class="h3 mb-1" style="color: var(--premium-dark); letter-spacing: -0.02em;">Dashboard</h1>
+            <p class="text-muted small mb-0">Welcome to EduManager</p>
+        </div>
+    </div>
+
+    <!-- Statistics Cards -->
+    <div class="row g-3 mb-4">
+        <div class="col-md-6 col-lg-3">
+            <div class="stat-card">
+                <div class="stat-icon" style="background-color: rgba(91, 107, 126, 0.1);">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="color: var(--premium-primary);">
+                        <path
+                            d="M12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12ZM12 14C9.33 14 4 15.34 4 18V20H20V18C20 15.34 14.67 14 12 14Z"
+                            fill="currentColor" />
+                    </svg>
+                </div>
+                <div class="stat-content">
+                    <div class="stat-value">{{ stats.totalStudents }}</div>
+                    <div class="stat-label">Total Students</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+            <div class="stat-card">
+                <div class="stat-icon" style="background-color: rgba(108, 154, 139, 0.1);">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="color: var(--premium-teal);">
+                        <path
+                            d="M18 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V4C20 2.9 19.1 2 18 2ZM18 20H6V4H18V20Z"
+                            fill="currentColor" />
+                        <path d="M8 6H16V8H8V6ZM8 10H16V12H8V10ZM8 14H13V16H8V14Z" fill="currentColor" />
+                    </svg>
+                </div>
+                <div class="stat-content">
+                    <div class="stat-value">{{ stats.totalCourses }}</div>
+                    <div class="stat-label">Active Courses</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+            <div class="stat-card">
+                <div class="stat-icon" style="background-color: rgba(184, 154, 108, 0.1);">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="color: var(--premium-warning);">
+                        <path
+                            d="M5 13.18V17.18L12 21L19 17.18V13.18L12 17L5 13.18ZM12 3L1 9L12 15L21 10.09V17H23V9L12 3Z"
+                            fill="currentColor" />
+                    </svg>
+                </div>
+                <div class="stat-content">
+                    <div class="stat-value">{{ stats.recentEnrollments }}</div>
+                    <div class="stat-label">This Year</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+            <div class="stat-card">
+                <div class="stat-icon" style="background-color: rgba(184, 134, 158, 0.1);">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="color: var(--premium-rose);">
+                        <path d="M9 16.17L4.83 12L3.41 13.41L9 19L21 7L19.59 5.59L9 16.17Z" fill="currentColor" />
+                    </svg>
+                </div>
+                <div class="stat-content">
+                    <div class="stat-value">{{ stats.activeStudents }}</div>
+                    <div class="stat-label">Active Students</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick Actions -->
+    <div class="row mb-4">
+        <div class="col">
+            <div class="card">
+                <div class="card-body p-3">
+                    <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
+                        <h6 class="mb-0 text-muted" style="font-size: 0.875rem; font-weight: 600;">Quick Actions</h6>
+                        <div class="d-flex gap-2 flex-wrap">
+                            <a routerLink="/students/new" class="btn btn-primary btn-sm">
+                                + Add Student
+                            </a>
+                            <a routerLink="/students" class="btn btn-secondary btn-sm">
+                                View All Students
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row g-4">
+        <!-- Recent Students -->
+        <div class="col-lg-8">
+            <div class="card">
+                <div class="card-header">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h5 class="h6 mb-0">Recent Students</h5>
+                        <a routerLink="/students" class="text-decoration-none small"
+                            style="color: var(--premium-primary);">
+                            View all →
+                        </a>
+                    </div>
+                </div>
+                <div class="card-body p-0">
+                    @if (recentStudents.length > 0) {
+                    <div class="table-responsive">
+                        <table class="table table-hover mb-0">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Course</th>
+                                    <th class="text-end">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @for (student of recentStudents; track student.id) {
+                                <tr>
+                                    <td class="fw-semibold">{{ student.firstName }} {{ student.lastName }}</td>
+                                    <td class="text-muted">{{ student.email }}</td>
+                                    <td>
+                                        <span class="badge bg-success">{{ student.course }}</span>
+                                    </td>
+                                    <td class="text-end">
+                                        <a [routerLink]="['/students', student.id]" class="btn btn-sm btn-info">View</a>
+                                    </td>
+                                </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                    } @else {
+                    <div class="text-center py-5">
+                        <p class="text-muted small mb-0">No students yet</p>
+                    </div>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <!-- Course Distribution -->
+        <div class="col-lg-4">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="h6 mb-0">Course Distribution</h5>
+                </div>
+                <div class="card-body">
+                    @if (courseDistribution.length > 0) {
+                    <div class="course-list">
+                        @for (item of courseDistribution; track item.course) {
+                        <div class="course-item">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="course-name">{{ item.course }}</span>
+                                <span class="course-count">{{ item.count }}</span>
+                            </div>
+                            <div class="progress" style="height: 6px;">
+                                <div class="progress-bar" [style.width.%]="(item.count / stats.totalStudents) * 100"
+                                    style="background-color: var(--premium-primary);"></div>
+                            </div>
+                        </div>
+                        }
+                    </div>
+                    } @else {
+                    <div class="text-center py-4">
+                        <p class="text-muted small mb-0">No data available</p>
+                    </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,100 @@
+/* Premium Student List Styling */
+
+/* Page Header */
+.h4.fw-semibold {
+    color: var(--premium-dark);
+}
+
+/* Search Input Refinement */
+.input-group .form-control {
+    border-left: none;
+}
+
+.input-group .form-control:focus {
+    border-left: 1px solid var(--premium-primary);
+}
+
+.input-group-text {
+    padding: 0.625rem 0.875rem;
+}
+
+/* Table Container */
+.table-responsive {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+/* Table Customization */
+.table {
+    margin-bottom: 0;
+}
+
+.table thead {
+    background-color: var(--premium-bg);
+}
+
+.table tbody tr {
+    cursor: default;
+}
+
+.table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Table Cell Emphasis */
+.table td.fw-semibold {
+    color: var(--premium-dark);
+    font-weight: 600;
+}
+
+/* Action Buttons */
+.btn-group-sm .btn {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--radius-sm);
+}
+
+.btn-group .btn:not(:last-child) {
+    margin-right: 0.25rem;
+}
+
+/* Button Color Refinements */
+.btn-info {
+    background-color: var(--premium-teal);
+    border-color: var(--premium-teal);
+}
+
+.btn-info:hover {
+    background-color: #5A8A7C;
+    border-color: #5A8A7C;
+}
+
+.btn-warning {
+    background-color: var(--premium-warning);
+    border-color: var(--premium-warning);
+}
+
+.btn-warning:hover {
+    background-color: #A68A5D;
+    border-color: #A68A5D;
+}
+
+.btn-danger:hover {
+    background-color: #A56B6B;
+    border-color: #A56B6B;
+}
+
+/* Empty State */
+.card.text-center {
+    background-color: var(--premium-white);
+    border: 1px solid var(--premium-border-light);
+}
+
+.card.text-center .card-body {
+    padding: 3rem 2rem;
+}
+
+/* ID Column Styling */
+.text-muted {
+    font-size: 0.8125rem;
+}

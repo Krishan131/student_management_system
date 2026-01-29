@@ -1,0 +1,92 @@
+@if (student) {
+<div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-7">
+            <div class="mb-3">
+                <a routerLink="/students"
+                    class="text-decoration-none text-muted small d-inline-flex align-items-center">
+                    <span class="me-1">←</span> Back to list
+                </a>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h2 class="h5 mb-0">Student Profile</h2>
+                        <div class="btn-group btn-group-sm">
+                            <a [routerLink]="['/students', student.id, 'edit']" class="btn btn-warning">
+                                Edit
+                            </a>
+                            <button (click)="deleteStudent()" class="btn btn-danger">
+                                Delete
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-body p-4">
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div>
+                                <label class="text-muted small mb-1">Student ID</label>
+                                <p class="mb-0">#{{ student.id }}</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div>
+                                <label class="text-muted small mb-1">Full Name</label>
+                                <p class="mb-0 fw-semibold">{{ student.firstName }} {{ student.lastName }}</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div>
+                                <label class="text-muted small mb-1">Email</label>
+                                <p class="mb-0">{{ student.email }}</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div>
+                                <label class="text-muted small mb-1">Date of Birth</label>
+                                <p class="mb-0">{{ student.dateOfBirth }}</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div>
+                                <label class="text-muted small mb-1">Course</label>
+                                <p class="mb-0">
+                                    <span class="badge bg-success">{{ student.course }}</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div>
+                                <label class="text-muted small mb-1">Enrollment Year</label>
+                                <p class="mb-0">{{ student.enrollmentYear }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+} @else {
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card text-center py-5">
+                <div class="card-body">
+                    <h2 class="h4 mb-3">Student Not Found</h2>
+                    <p class="text-muted mb-4">This student doesn't exist.</p>
+                    <a routerLink="/students" class="btn btn-primary btn-sm">Back to List</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+}

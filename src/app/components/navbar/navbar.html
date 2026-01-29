@@ -1,0 +1,43 @@
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid px-4">
+        <a class="navbar-brand" routerLink="/dashboard">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                style="margin-right: 0.5rem; vertical-align: text-bottom;" class="d-inline-block">
+                <path d="M5 13.18V17.18L12 21L19 17.18V13.18L12 17L5 13.18ZM12 3L1 9L12 15L21 10.09V17H23V9L12 3Z"
+                    fill="currentColor" />
+            </svg>
+            EduManager
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link px-3" routerLink="/dashboard" routerLinkActive="active"
+                        [routerLinkActiveOptions]="{exact: true}">
+                        Dashboard
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3" routerLink="/students" routerLinkActive="active"
+                        [routerLinkActiveOptions]="{exact: true}">
+                        All Students
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3" routerLink="/students/new" routerLinkActive="active">
+                        Add Student
+                    </a>
+                </li>
+            </ul>
+            <div class="d-flex ms-3">
+                <button class="btn btn-primary btn-sm">
+                    Logout
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>

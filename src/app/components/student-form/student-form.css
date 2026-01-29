@@ -1,0 +1,75 @@
+/* Premium Form Styling */
+
+/* Form Container */
+.card {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* Form Inputs - Additional refinements */
+.form-control,
+.form-select {
+    background-color: var(--premium-white);
+    transition: all var(--transition-base);
+}
+
+.form-control:hover:not(:focus),
+.form-select:hover:not(:focus) {
+    border-color: var(--premium-primary-light);
+}
+
+/* Validation Styling */
+.is-invalid {
+    background-image: none;
+}
+
+.invalid-feedback {
+    margin-top: 0.375rem;
+    font-weight: 500;
+}
+
+/* Button Group Spacing */
+.d-flex.gap-2 {
+    gap: 0.75rem !important;
+}
+
+/* Form Row Spacing */
+.row.g-3 {
+    row-gap: 1.25rem !important;
+}
+
+/* Date Input Customization */
+input[type="date"],
+input[type="number"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity var(--transition-fast);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+    opacity: 1;
+}
+
+/* Submit Button Enhancement */
+button[type="submit"] {
+    min-width: 120px;
+}
+
+/* Cancel Button */
+.btn-secondary {
+    background-color: var(--premium-bg-secondary);
+    color: var(--premium-text);
+    border-color: var(--premium-border);
+}
+
+.btn-secondary:hover {
+    background-color: var(--premium-secondary);
+    color: var(--premium-white);
+    border-color: var(--premium-secondary);
+}

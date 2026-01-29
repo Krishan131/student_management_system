@@ -1,0 +1,45 @@
+/* Premium Student Detail Styling */
+
+/* Back Link */
+a.text-decoration-none {
+    color: var(--premium-text-muted);
+    font-weight: 500;
+    transition: color var(--transition-fast);
+}
+
+a.text-decoration-none:hover {
+    color: var(--premium-primary);
+}
+
+/* Info Labels */
+label.text-muted {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+    color: var(--premium-text-muted);
+}
+
+/* Info Values */
+.card-body p {
+    font-size: 0.9375rem;
+    color: var(--premium-text);
+}
+
+.card-body p.fw-semibold {
+    color: var(--premium-dark);
+    font-weight: 600;
+}
+
+/* Badge Customization */
+.badge.bg-success {
+    background-color: var(--premium-teal) !important;
+    font-size: 0.8125rem;
+    padding: 0.5rem 1rem;
+}
+
+/* Action Buttons in Header */
+.card-header .btn-group .btn {
+    font-size: 0.8125rem;
+}
