@@ -1,17 +1,19 @@
 /* Premium Navbar Styling */
 .navbar {
-    background-color: var(--premium-white);
-    border-bottom: 1px solid var(--premium-border-light);
+    background-color: var(--navbar-bg);
+    border-bottom: none;
     padding: 1rem 0;
-    box-shadow: var(--shadow-xs);
+    box-shadow: var(--shadow-md);
 }
 
 .navbar-brand {
     font-size: 1.0625rem;
     font-weight: 600;
     letter-spacing: -0.01em;
-    color: var(--premium-dark);
+    color: var(--navbar-text);
     transition: color var(--transition-fast);
+    display: flex;
+    align-items: center;
 }
 
 .navbar-brand:hover {
@@ -21,17 +23,17 @@
 .nav-link {
     font-size: 0.9375rem;
     font-weight: 500;
-    color: var(--premium-text);
+    color: rgba(255, 255, 255, 0.7);
     transition: color var(--transition-fast);
     position: relative;
 }
 
 .nav-link:hover {
-    color: var(--premium-primary);
+    color: var(--navbar-text);
 }
 
 .nav-link.active {
-    color: var(--premium-primary);
+    color: var(--premium-white);
 }
 
 .nav-link.active::after {

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterLink } from '@angular/router';
+import { RouterLink, ActivatedRoute } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { StudentService } from '../../services/student.service';
 import { Student } from '../../models/student.model';
@@ -17,12 +17,22 @@ export class StudentList implements OnInit {
   searchQuery: string = '';
   selectedCourse: string = '';
 
-  constructor(private studentService: StudentService) { }
+  constructor(
+    private studentService: StudentService,
+    private route: ActivatedRoute
+  ) { }
 
   ngOnInit(): void {
     this.studentService.getStudents().subscribe(students => {
       this.students = students;
-      this.filteredStudents = students;
+      this.filterStudents();
+    });
+
+    this.route.queryParams.subscribe(params => {
+      if (params['course']) {
+        this.selectedCourse = params['course'];
+        this.filterStudents();
+      }
     });
   }
 
