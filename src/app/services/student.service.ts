@@ -138,6 +138,39 @@ export class StudentService {
             enrollmentYear: 2021,
             address: '531 Redwood Ave, Watertown, MA 02472',
             phone: '6177778888'
+        },
+        {
+            id: 13,
+            firstName: 'Liam',
+            lastName: 'Johnson',
+            email: 'liam.j@example.com',
+            dateOfBirth: '2004-02-10',
+            course: 'Computer Science',
+            enrollmentYear: 2026,
+            address: '101 Pine St, Seattle, WA 98101',
+            phone: '2065550101'
+        },
+        {
+            id: 14,
+            firstName: 'Olivia',
+            lastName: 'Smith',
+            email: 'olivia.s@example.com',
+            dateOfBirth: '2003-11-25',
+            course: 'Data Science',
+            enrollmentYear: 2026,
+            address: '202 Maple Ave, Portland, OR 97205',
+            phone: '5035550102'
+        },
+        {
+            id: 15,
+            firstName: 'Noah',
+            lastName: 'Williams',
+            email: 'noah.w@example.com',
+            dateOfBirth: '2004-07-15',
+            course: 'Artificial Intelligence',
+            enrollmentYear: 2026,
+            address: '303 Cedar Ln, San Francisco, CA 94107',
+            phone: '4155550103'
         }
     ];
 

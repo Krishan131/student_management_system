@@ -1,6 +1,12 @@
 <div class="container py-4">
     <div class="row justify-content-center">
         <div class="col-lg-7">
+            <div class="mb-3">
+                <a routerLink="/dashboard"
+                    class="text-decoration-none text-muted small d-inline-flex align-items-center">
+                    <span class="me-1">←</span> Back to dashboard
+                </a>
+            </div>
             <div class="card">
                 <div class="card-header">
                     <h2 class="h5 mb-0">{{ isEditMode ? 'Edit Student' : 'New Student' }}</h2>

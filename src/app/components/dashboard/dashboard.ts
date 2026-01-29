@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterLink } from '@angular/router';
+import { RouterLink, Router } from '@angular/router';
 import { StudentService } from '../../services/student.service';
 import { Student } from '../../models/student.model';
 
@@ -34,7 +34,10 @@ export class Dashboard implements OnInit {
     courseDistribution: CourseDistribution[] = [];
     students: Student[] = [];
 
-    constructor(private studentService: StudentService) { }
+    constructor(
+        private studentService: StudentService,
+        private router: Router
+    ) { }
 
     ngOnInit(): void {
         this.studentService.getStudents().subscribe(students => {
@@ -43,6 +46,10 @@ export class Dashboard implements OnInit {
             this.getRecentStudents(students);
             this.calculateCourseDistribution(students);
         });
+    }
+
+    viewCourseStudents(course: string): void {
+        this.router.navigate(['/students'], { queryParams: { course } });
     }
 
     private calculateStats(students: Student[]): void {

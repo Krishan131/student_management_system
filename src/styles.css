@@ -4,46 +4,53 @@
 
 /* CSS Custom Properties - Brightened Premium Palette */
 :root {
-    /* Primary Colors - Vibrant Slate Blue */
-    --premium-primary: #4A8FD9;
-    --premium-primary-light: #6BA6E3;
-    --premium-primary-dark: #3870B8;
+    /* Primary Colors - Premium Red (ACAMIS Style) */
+    --premium-primary: #E53935;
+    --premium-primary-light: #EF5350;
+    --premium-primary-dark: #C62828;
 
     /* Secondary Colors - Warm Gray */
-    --premium-secondary: #A8A39C;
-    --premium-secondary-light: #C2BEBA;
-    --premium-secondary-dark: #8E8984;
+    --premium-secondary: #757575;
+    --premium-secondary-light: #BDBDBD;
+    --premium-secondary-dark: #616161;
 
     /* Accent Colors */
-    --premium-teal: #48D1A8;
-    --premium-teal-light: #6DE3C0;
-    --premium-rose: #E393C8;
-    --premium-rose-light: #F0AED9;
+    --premium-teal: #00897B;
+    --premium-teal-light: #4DB6AC;
+    --premium-rose: #D81B60;
+    --premium-rose-light: #F06292;
 
-    /* Neutral Colors */
-    --premium-bg: #F8F9FA;
-    --premium-bg-secondary: #F0F2F4;
+    /* Neutral Colors - Light Mode (Restored) */
+    --premium-bg: #E8ECEF;
+    /* Softened from #F5F7FA */
+    --premium-bg-secondary: #FFFFFF;
     --premium-white: #FFFFFF;
-    --premium-dark: #2D3436;
-    --premium-text: #3F4447;
-    --premium-text-muted: #6C7378;
-    --premium-text-light: #9CA3A8;
+    --premium-dark: #263238;
+    /* Dark Charcoal for headers */
+    --premium-text: #37474F;
+    /* Dark Blue-Grey for text */
+    --premium-text-muted: #78909C;
+    --premium-text-light: #B0BEC5;
+
+    /* Navbar Specific */
+    --navbar-bg: #263238;
+    --navbar-text: #ECEFF1;
 
     /* Border Colors */
-    --premium-border: #DDE1E4;
-    --premium-border-light: #E8EBED;
+    --premium-border: #E0E0E0;
+    --premium-border-light: #F5F5F5;
 
-    /* Status Colors - Brightened */
-    --premium-success: #4FD98A;
-    --premium-warning: #F0C04B;
-    --premium-danger: #EF6B6B;
-    --premium-info: #4AA8E8;
+    /* Status Colors */
+    --premium-success: #43A047;
+    --premium-warning: #FB8C00;
+    --premium-danger: #E53935;
+    --premium-info: #039BE5;
 
-    /* Shadows - Subtle */
-    --shadow-xs: 0 1px 2px rgba(45, 52, 54, 0.04);
-    --shadow-sm: 0 2px 4px rgba(45, 52, 54, 0.06);
-    --shadow-md: 0 4px 12px rgba(45, 52, 54, 0.08);
-    --shadow-lg: 0 8px 24px rgba(45, 52, 54, 0.1);
+    /* Shadows - Subtle for Light Mode */
+    --shadow-xs: 0 1px 2px rgba(38, 50, 56, 0.08);
+    --shadow-sm: 0 2px 4px rgba(38, 50, 56, 0.1);
+    --shadow-md: 0 4px 12px rgba(38, 50, 56, 0.12);
+    --shadow-lg: 0 8px 24px rgba(38, 50, 56, 0.15);
 
     /* Spacing */
     --spacing-xs: 0.25rem;
@@ -78,7 +85,7 @@ html {
 
 body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 0.9375rem;
     line-height: 1.6;
     color: var(--premium-text);
